@@ -16,8 +16,8 @@ const uint16_t NUM_PIXELS2 = 18;    // 点灯させるLEDの数を指定
 // 色の初期設定
 
 float hue = 0.0;                  // 色相（0.0〜1.0）
-float bright = 0.3;               // 明るさ（0.0〜1.0）
-float saturation = 0.5;             // 彩度（0.0〜1.0）
+float bright = 0.27;               // 明るさ（0.0〜1.0）
+float saturation = 0.55;             // 彩度（0.0〜1.0）
 
 float hue2 = 0.0;                  // 色相（0.0〜1.0）
 float bright2 = 1;               // 明るさ（0.0〜1.0）

@@ -16,12 +16,12 @@ const uint16_t NUM_PIXELS2 = 18;    // 点灯させるLEDの数を指定
 // 色の初期設定
 
 float hue = 0.0;                  // 色相（0.0〜1.0）
-float bright = 1;               // 明るさ（0.0〜1.0）
-float saturation = 1.0;             // 彩度（0.0〜1.0）
+float bright = 0.3;               // 明るさ（0.0〜1.0）
+float saturation = 0.5;             // 彩度（0.0〜1.0）
 
 float hue2 = 0.0;                  // 色相（0.0〜1.0）
 float bright2 = 1;               // 明るさ（0.0〜1.0）
-float saturation2 = 1.0; 
+float saturation2 = 0.7; 
 
 int hueBottom = 10;               // グラデーションの下端（0〜100）
 int hueTop = 80;                  // グラデーションの上端（0〜100）
@@ -273,7 +273,7 @@ void ledControl() {
     // 消す前にフェードアウトさせる
     if(fadeOnFlg) {
       if(prevBright > 0.0) {
-        prevBright -= 0.0125;
+        prevBright -= 0.0025;
         hsv2rgb(prevHue, saturation, prevBright, col);
         neopixel.set(col[0], col[1], col[2]);
         neopixel.show();
